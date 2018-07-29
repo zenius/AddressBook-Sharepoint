@@ -1,0 +1,237 @@
+﻿OCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+<title>Address Book</title>
+<link rel="stylesheet" href="/sites/Technovert%20Publishing%20Site/Tasks/AddressBook/css/addressBook.css">
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:Keywords msdt:dt="string"></mso:Keywords>
+<mso:_Author msdt:dt="string">bharat dong</mso:_Author>
+<mso:wic_System_Copyright msdt:dt="string"></mso:wic_System_Copyright>
+<mso:_Comments msdt:dt="string"></mso:_Comments>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+
+<div class="container">
+	<div class="header">
+		<h1>address book</h1>
+	</div>
+	<div class="navigation-bar">
+		<ul>
+			<li>home</li>
+			<li id="addContact">+add</li>
+			<!--&#43; is a plus symbol--></li>
+			<li>
+			<img src="/sites/Technovert%20Publishing%20Site/Tasks/AddressBook/images/blog-icon.png" alt="blog-icon"></li>
+		</ul>
+	</div>
+	<div class="main-content">
+		<div class="contact">
+			<h4>contacts</h4>
+			<div class="contact-list">
+				<div class ="contact-card">
+					<div id="noContacts">
+						no contacts
+					</div>
+				</div>
+				<!--contact list will come here-->
+			</div>
+		</div>
+		<div class="form-container">
+			<div id="contactForm">
+				<div id="errorMessage">
+				</div>
+				<div id="closeForm" title="close">
+					×</div>
+				<div class="field">
+					<div class="field-label">
+						<label for="username">Name</label> </div>
+					<div class="field-input">
+						<input type="text" name="Name" id="username" class ="form-field"> 
+					</div>
+					<div class="error">
+					</div>
+				</div>
+				<div class="field">
+					<div class="field-label">
+						<label for="dateOfBirth">Date of Birth</label> </div>
+					<div class="field-input">
+						<input type="date" name="dateOfBirth" id="dateOfBirth" class ="form-field">
+					</div>
+					<div class="error">
+					</div>
+				</div>
+				
+				<div class="field">
+                	<div class ="field-label">
+                        <label for="maritalStatus">Marital Status</label>
+                    </div>
+	                <div class="field-input">
+						<select id = "maritalStatus" class ="form-field"> 
+							<option value="" class ="default-value">Select</option>
+
+							<!--marital status choice will come here--> 
+						</select>   
+	                </div>	
+                </div>
+				
+				<div class="field">
+                	<div class ="field-label">
+                        <label for="company">Company</label>
+                    </div>
+	                <div class="field-input">
+	                	<select id = "company" class ="form-field">
+	                		<option value="" class ="default-value" id ="0">Select</option>
+							<!--look up field value will come here --> 
+						</select> 
+	                </div>	
+                </div>
+
+                <div class="field">
+                	<div class ="field-label">
+                        <label for="browser">Browser</label>
+                    </div>
+	                <div class="field-input" class ="form-field">
+	                	<select id = "browser" class ="form-field">
+	                		<option value="" class ="default-value" id ="0">Select</option>
+							<!--managed metadata field value will come here --> 
+						</select> 
+	                </div>	
+                </div>
+				
+				<!--this field is a people picker field-->
+				<div class="field">
+                	<div class ="field-label">
+                        <label for="relative">Relative</label>
+                    </div>
+	                <div class="field-input" >
+	            		<div id="relative"></div>
+	                </div>	
+                </div> 
+				
+				<div class="field">
+					<div class="field-label">
+						<label for="email">Email</label> </div>
+					<div class="field-input">
+						<input type="email" name="email" id="email" class ="form-field"> </div>
+					<div class="error">
+					</div>
+				</div>
+				
+				<div class="contact-field">
+					<div class="mobile">
+						<div class="mobile-label">
+							<label for="tel">Mobile<label> 
+						</div>
+						<div class="mobile-input">
+							<input type="tel" id="mobileNo" maxlength="10">
+						</div>
+						<div class="error">
+						</div>
+					</div>
+					<div class="landline">
+						<div class="landline-label">
+							<label for="landlineNo">Landline</label> </div>
+						<div class="landline-input">
+							<input type="tel" id="landlineNo" maxlength="10">
+						</div>
+						<div class="error">
+						</div>
+					</div>
+				</div>
+				<div class="field" id="websiteField">
+					<div class="field-label">
+						<label for="url">Website</label> </div>
+					<div class="field-input">
+						<input type="url" name="url" id="url" class ="form-field"> </div>
+					<div class="error">
+					</div>
+				</div>
+				<div class="addressBox">
+					<div class="textarea-head">
+						<label for="addressDetails">Address</label> </div>
+					<textarea id="addressDetails" rows="10"></textarea> </div>
+				<div class="send-clear">
+					<button type="button" id="addBtn">Add</button>
+					<button type="button" id="updateBtn">Update</button></div>
+			</div>
+		</div>
+		<div class="contact-info">
+			<div class="contact-details">
+				<div id="personName">
+				</div>
+				<div id="personDateOfBirth" class ="show-details">
+				</div>
+				<div id="personMaritalStatus" class ="show-details">
+				</div> 
+				<div id="emailId" class ="show-details">
+				</div>
+				<div id="mobileNumber">
+				</div>
+				<div id="landlineNumber" class ="show-details">
+				</div>
+				<div id="browserName" class ="show-details" >
+				</div>
+				<div id="website" class ="show-details" >
+				</div>
+				<div id="address" class ="show-details" >
+				</div>
+				<div id="personCompany" class ="show-details" >
+				</div>
+				<div id="personRelative" class ="show-details" >
+				</div> 
+			</div>
+			<div class="edit-delete">
+				<div class="editIcon">
+					<label for="edit" id="editOption">
+					<img src="/sites/Technovert%20Publishing%20Site/Tasks/AddressBook/images/edit1.png" alt="image of edit" id="edit"> 
+					<span>edit</span> </label></div>
+				<div class="deleteIcon">
+					<label for="delete" id="deleteOption">
+					<img src="/sites/Technovert%20Publishing%20Site/Tasks/AddressBook/images/delete1.png" alt="image of delete" id="delete">
+					<span> delete</span> </label></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/sites/Technovert%20Publishing%20Site/Tasks/AddressBook/js/jquery.js"></script>
+
+<!--script for handling term store --> 
+<!-- <script 
+    src="//ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js" 
+    type="text/javascript">
+</script> -->
+
+<script type="text/javascript" src ="/sites/Technovert%20Publishing%20Site/Tasks/AddressBook/js/MicrosftAjax.js"></script>
+
+<script 
+    type="text/javascript" 
+    src="/_layouts/15/sp.runtime.js">
+</script>
+<script 
+    type="text/javascript" 
+    src="/_layouts/15/sp.js">
+</script>
+
+<!--script for handling client people picker--> 
+<!--sequence here is important-->
+<script src="/_layouts/15/clientpeoplepicker.js"></script>
+<script src="/_layouts/15/clienttemplates.js"></script>  
+<script src="/_layouts/15/clientforms.js"></script> 
+<script src="/_layouts/15/autofill.js"></script>  
+<script src ="/_layouts/15/sp.core.js"></script>
+<script src="/_layouts/15/sp.RequestExecutor.js"></script>
+
+<!--script for taxonomy field-->
+<script type="text/javascript" src="/_layouts/15/sp.taxonomy.js"></script>
+
+<script src="/sites/Technovert%20Publishing%20Site/Tasks/AddressBook/js/addressBook.js"></script>
+</label></label>
+
+</body>
+
+</html>
